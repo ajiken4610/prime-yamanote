@@ -1,7 +1,9 @@
 const data = ref(
   ((localStorage.getItem("saveData") &&
-    JSON.parse(localStorage.getItem("saveData"))) || { primes: [] }) as {
-    primes: number[];
+    JSON.parse(localStorage.getItem("saveData"))) || {
+    primes: ["2"],
+  }) as {
+    primes: string[];
   }
 );
 export default () => data;
